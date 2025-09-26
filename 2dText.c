@@ -61,6 +61,6 @@ void RenderTextS(TextS *txt, const char *text, float x, float y)
     glBindVertexArray(txt->vao);
     glBindBuffer(GL_ARRAY_BUFFER, txt->vbo);
     glBufferSubData(GL_ARRAY_BUFFER, 0, numQuads * 4 * 16, buffer);
-    glDrawArrays(GL_QUADS, 0, numQuads * 4); // Still uses GL_QUADS – see note below
+    glDrawArrays(GL_QUADS, 0, numQuads * 4); // this is cause problems in rendering TODO find a FIX!!!
     glBindVertexArray(0);
 }
